@@ -449,7 +449,10 @@ abstract class AbstractPart
         $styles = array();
 
         foreach ($styleDefs as $styleProp => $styleVal) {
-            @list($method, $element, $attribute, $expected) = $styleVal;
+            $method = $styleVal[0] ?? null;
+            $element = $styleVal[1] ?? null;
+            $attribute = $styleVal[2] ?? null;
+            $expected = $styleVal[3] ?? null;            
 
             if ($xmlReader->elementExists($element, $parentNode)) {
                 $node = $xmlReader->getElement($element, $parentNode);
