@@ -46,21 +46,21 @@ class TemplateProcessor
      *
      * @var string
      */
-    protected $tempDocumentMainPart;
+    public $tempDocumentMainPart;
 
     /**
      * Content of headers (in XML format) of the temporary document.
      *
      * @var string[]
      */
-    protected $tempDocumentHeaders = array();
+    public $tempDocumentHeaders = array();
 
     /**
      * Content of footers (in XML format) of the temporary document.
      *
      * @var string[]
      */
-    protected $tempDocumentFooters = array();
+    public $tempDocumentFooters = array();
 
     /**
      * @since 0.12.0 Throws CreateTemporaryFileException and CopyFileException instead of Exception.
